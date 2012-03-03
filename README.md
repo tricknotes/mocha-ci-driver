@@ -1,5 +1,7 @@
 # mocha CI driver
 
+[![Build Status](https://secure.travis-ci.org/tricknotes/mocha-ci-driver.png)](http://travis-ci.org/tricknotes/mocha-ci-driver)
+
 `mocha-ci-driver` is a driver what make test that is written by [mocha](https://github.com/visionmedia/mocha) for browser working on Node.js.
 Your code and test for browser works on Node.js without rewriting for Node.js.
 
