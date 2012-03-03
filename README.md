@@ -3,6 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/tricknotes/mocha-ci-driver.png)](http://travis-ci.org/tricknotes/mocha-ci-driver)
 
 `mocha-ci-driver` is a driver what make test that is written by [mocha](https://github.com/visionmedia/mocha) for browser working on Node.js.
+
 Your code and test for browser works on Node.js without rewriting for Node.js.
 
 ## Install
@@ -14,7 +15,9 @@ $ git clone git://github.com/tricknotes/mocha-ci-driver.git ./node_modules/mocha
 
 ## Usage
 
-`./test/index.html`(Your test html)
+Setup:
+
+Modify `./test/index.html`(Your test html)
 
 ``` html
 <script>
@@ -25,7 +28,7 @@ $ git clone git://github.com/tricknotes/mocha-ci-driver.git ./node_modules/mocha
 </script>
 ```
 
-`./test/driver.js`
+Add `./test/driver.js`
 
 ``` js
 var Driver = require('mocha-ci-driver').Driver
@@ -36,7 +39,7 @@ var Driver = require('mocha-ci-driver').Driver
 driver.run('/test/index.html');
 ```
 
-And run:
+And run
 
 ``` sh
 $ node ./test/driver.js
@@ -60,7 +63,9 @@ driver.run('/test/index2.html');
 ## Supported [mocha](https://github.com/visionmedia/mocha) version
 
 Supported revision is later visionmedia/mocha@a186b8dba1 .
+
 This revision is not tagged yet.
+
 To use `mocha-ci-driver`, build `mocha` for your project.
 
 ``` sh
@@ -70,6 +75,7 @@ $ make clean && make
 ```
 
 Use generated `mocha.js` to your html for test.
+
 (I will publish to npm module after mocha tagged.)
 
 ## Test
