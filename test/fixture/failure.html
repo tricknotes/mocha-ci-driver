@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test fixture for mocha-ci-driver</title>
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="./jquery-1.7.1.min.js"></script>
+    <script src="../../node_modules/expect.js/expect.js"></script>
+    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script>
+      describe('Fixture', function() {
+        it('should be failure', function() {
+          expect(true).to.be(false);
+        });
+      });
+    </script>
+    <script>
+      // Execute `mocha.run()` when accessed from browser
+      if (!/Node.js/.test(navigator.appName)) {
+        mocha.run();
+      }
+    </script>
+  </body>
+</html>
