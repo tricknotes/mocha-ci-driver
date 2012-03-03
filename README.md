@@ -62,7 +62,7 @@ driver.run('/test/index2.html');
 
 ## Supported [mocha](https://github.com/visionmedia/mocha) version
 
-Supported revision is later visionmedia/mocha@a186b8dba1 .
+Supported revision is later [visionmedia/mocha@a186b8dba1](https://github.com/visionmedia/mocha/commit/a186b8dba1079385b763186a3eacdbc24a556095) .
 
 This revision is not tagged yet.
 
