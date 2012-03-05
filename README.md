@@ -68,6 +68,12 @@ This revision is not tagged yet.
 
 To use `mocha-ci-driver`, use source from [GitHub](https://github.com/visionmedia/mocha)
 
+``` html
+<script src="https://raw.github.com/visionmedia/mocha/master/mocha.js"></script>
+```
+
+Or download and load:
+
 ``` sh
 $ curl https://github.com/visionmedia/mocha/blob/master/mocha.js > mocha.js
 ```
@@ -76,7 +82,7 @@ $ curl https://github.com/visionmedia/mocha/blob/master/mocha.js > mocha.js
 <script src="./mocha.js"></script>
 ```
 
-Or build `mocha` for your project.
+Or build `mocha` for your project:
 
 ``` sh
 $ git clone git://github.com/visionmedia/mocha.git mocha
