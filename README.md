@@ -9,6 +9,12 @@ Your code and test for browser works on Node.js without rewriting for Node.js.
 ## Install
 
 ``` sh
+$ npm install mocha-ci-driver
+```
+
+The other way:
+
+``` sh
 $ cd YOUR_PROJECT_HOME
 $ git clone git://github.com/tricknotes/mocha-ci-driver.git ./node_modules/mocha-ci-driver
 ```
