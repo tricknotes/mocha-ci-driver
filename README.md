@@ -66,7 +66,17 @@ Supported revision is later [visionmedia/mocha@a186b8dba1](https://github.com/vi
 
 This revision is not tagged yet.
 
-To use `mocha-ci-driver`, build `mocha` for your project.
+To use `mocha-ci-driver`, use source from [GitHub](https://github.com/visionmedia/mocha)
+
+``` sh
+$ curl https://github.com/visionmedia/mocha/blob/master/mocha.js > mocha.js
+```
+
+``` html
+<script src="./mocha.js"></script>
+```
+
+Or build `mocha` for your project.
 
 ``` sh
 $ git clone git://github.com/visionmedia/mocha.git mocha
