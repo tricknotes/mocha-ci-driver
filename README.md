@@ -92,8 +92,6 @@ $ make clean && make
 
 Use generated `mocha.js` to your html for test.
 
-(I will publish to npm module after mocha tagged.)
-
 ## Test
 
 ``` sh
