@@ -39,8 +39,7 @@ Add `./test/driver.js`
 ``` js
 var Driver = require('mocha-ci-driver').Driver
   , basedir = '../'
-  , port = 8080
-  , driver = new Driver(basedir, port)
+  , driver = new Driver(basedir)
 
 driver.run('/test/index.html');
 ```

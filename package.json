@@ -17,7 +17,6 @@
   }
   , "dependencies": {
       "mocha": "~> 0.14.1"
-    , "express": "~> 2.5.0"
     , "zombie": "~> 0.12.14"
   }
   , "devDependencies": {

@@ -9,12 +9,6 @@ describe('Driver', function() {
     driver = new Driver(__dirname+'/../', ++port);
   });
 
-  describe('initialized', function() {
-    it('should have port to be listened', function() {
-      expect(driver.port).to.be(port);
-    });
-  });
-
   describe('#run()', function() {
     it('should emit "error" with failure test', function(done) {
       driver.on('error', function() {
