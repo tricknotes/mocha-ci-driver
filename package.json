@@ -1,6 +1,6 @@
 {
     "name": "mocha-ci-driver"
-  , "version": "0.0.2"
+  , "version": "0.0.3"
   , "description": "A driver for testing the same as browser and Node.js"
   , "keywords": ["test", "mocha", "ci"]
   , "author": "Ryunosuke SATO <tricknotes.rs@gmail.com>"
