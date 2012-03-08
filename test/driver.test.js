@@ -3,10 +3,9 @@ var Driver = require('../').Driver
 
 describe('Driver', function() {
   var driver
-    , port = 13000
 
   beforeEach(function() {
-    driver = new Driver(__dirname+'/../', ++port);
+    driver = new Driver(__dirname+'/../');
   });
 
   describe('#run()', function() {
