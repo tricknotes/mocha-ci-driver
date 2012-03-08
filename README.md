@@ -38,10 +38,9 @@ Add `./test/driver.js`
 
 ``` js
 var Driver = require('mocha-ci-driver').Driver
-  , basedir = '../'
-  , driver = new Driver(basedir)
+  , driver = new Driver()
 
-driver.run('/test/index.html');
+driver.run(__dirname+'/test/index.html');
 ```
 
 And run
@@ -55,14 +54,14 @@ $ node ./test/driver.js
 Use other reporter (default is `Dot`):
 
 ``` js
-driver.run('/test/index.html', 'Spec');
+driver.run(__dirname+'/test/index.html', 'Spec');
 ```
 
 Run multiple tests:
 
 ``` js
-driver.run('/test/index1.html');
-driver.run('/test/index2.html');
+driver.run(__dirname+'/test/index1.html');
+driver.run(__dirname+'/test/index2.html');
 ```
 
 ## Test

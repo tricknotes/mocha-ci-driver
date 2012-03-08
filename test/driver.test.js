@@ -5,7 +5,7 @@ describe('Driver', function() {
   var driver
 
   beforeEach(function() {
-    driver = new Driver(__dirname+'/../');
+    driver = new Driver();
   });
 
   describe('#run()', function() {
@@ -13,12 +13,12 @@ describe('Driver', function() {
       driver.on('error', function() {
         done()
       });
-      driver.run('/test/fixture/failure.html');
+      driver.run(__dirname+'/fixture/failure.html');
     });
 
     it('should emit "success" with success test', function(done) {
       driver.on('success', done);
-      driver.run('/test/fixture/success.html');
+      driver.run(__dirname+'/fixture/success.html');
     });
 
     it('should support running multiple tests', function(done) {
@@ -26,9 +26,9 @@ describe('Driver', function() {
         driver.on('error', function() {
           done();
         });
-        driver.run('/test/fixture/failure.html');
+        driver.run(__dirname+'/fixture/failure.html');
       });
-      driver.run('/test/fixture/success.html');
+      driver.run(__dirname+'/fixture/success.html');
     });
   });
 });
