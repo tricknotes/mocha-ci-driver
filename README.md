@@ -54,7 +54,7 @@ $ node ./test/driver.js
 Use other reporter (default is `Dot`):
 
 ``` js
-driver.run(__dirname+'/test/index.html', 'Spec');
+driver.run(__dirname+'/test/index.html', {reporter: 'Spec'});
 ```
 
 Run multiple tests:
