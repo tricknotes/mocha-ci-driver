@@ -16,7 +16,7 @@
       "test": "./node_modules/mocha/bin/mocha --colors --reporter spec test/*.test.* --timeout 5000"
   }
   , "dependencies": {
-      "mocha": "~> 0.14.1"
+      "mocha": "~> 1.0.0"
     , "zombie": "~> 0.12.14"
   }
   , "devDependencies": {
