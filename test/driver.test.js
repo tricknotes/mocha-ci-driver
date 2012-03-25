@@ -17,7 +17,9 @@ describe('Driver', function() {
     });
 
     it('should emit "success" with success test', function(done) {
-      driver.on('success', done);
+      driver.on('success', function() {
+        done();
+      });
       driver.run(__dirname+'/fixture/success.html');
     });
 
