@@ -54,9 +54,6 @@ $ node ./test/driver.js
 Use other reporter (default is `Dot`):
 
 ``` js
-driver.run(__dirname+'/test/index.html', 'Spec');
-
-// This API is later visionmedia/mocha@12c4e1eb
 driver.run(__dirname+'/test/index.html', {reporter: 'Spec'});
 ```
 
