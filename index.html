@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="mocha-ci-driver : A driver for testing the same as browser and Node.js" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>mocha-ci-driver</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tricknotes/mocha-ci-driver">Fork Me on GitHub</a>
+
+          <h1 id="project_title">mocha-ci-driver</h1>
+          <h2 id="project_tagline">A driver for testing the same as browser and Node.js</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/tricknotes/mocha-ci-driver/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/tricknotes/mocha-ci-driver/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><code>mocha-ci-driver</code> is a driver that make test written by <a href="https://github.com/visionmedia/mocha">mocha</a> for browser working on Node.js.</p>
+
+<p>Your code and test for browser works on Node.js without rewriting for Node.js.</p>
+
+<h2>Install</h2>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>npm install mocha-ci-driver
+</pre>
+</div>
+
+
+<p>The other way:</p>
+
+<div class="highlight">
+<pre><span class="nv">$ </span><span class="nb">cd </span>YOUR_PROJECT_HOME
+<span class="nv">$ </span>git clone git://github.com/tricknotes/mocha-ci-driver.git ./node_modules/mocha-ci-driver
+</pre>
+</div>
+
+
+<h2>Usage</h2>
+
+<p>Setup:</p>
+
+<p>Modify <code>./test/index.html</code>(Your test html)</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;script&gt;</span>
+  <span class="c1">// Execute `mocha.run()` when accessed from browser</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="sr">/Node.js/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">appName</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">mocha</span><span class="p">.</span><span class="nx">run</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre>
+</div>
+
+
+<p>Add <code>./test/driver.js</code></p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">Driver</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mocha-ci-driver'</span><span class="p">).</span><span class="nx">Driver</span>
+  <span class="p">,</span> <span class="nx">driver</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Driver</span><span class="p">()</span>
+
+<span class="nx">driver</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">'/test/index.html'</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<p>And run</p>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>node ./test/driver.js
+</pre>
+</div>
+
+
+<h3>Optional</h3>
+
+<p>Use other reporter (default is <code>Dot</code>):</p>
+
+<div class="highlight">
+<pre><span class="nx">driver</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">'/test/index.html'</span><span class="p">,</span> <span class="p">{</span><span class="nx">reporter</span><span class="o">:</span> <span class="s1">'Spec'</span><span class="p">});</span>
+</pre>
+</div>
+
+
+<p>Run multiple tests:</p>
+
+<div class="highlight">
+<pre><span class="nx">driver</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">'/test/index1.html'</span><span class="p">);</span>
+<span class="nx">driver</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">'/test/index2.html'</span><span class="p">);</span>
+</pre>
+</div>
+
+
+<h2>Test</h2>
+
+<div class="highlight">
+<pre><span class="nv">$ </span>npm <span class="nb">test</span>
+</pre>
+</div>
+
+
+<h2>Author</h2>
+
+<p>Copyright (c) 2012 Ryunosuke SATO &lt;tricknotes.rs@gmail.com&gt;</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">mocha-ci-driver maintained by <a href="https://github.com/tricknotes">tricknotes</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
