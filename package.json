@@ -17,7 +17,7 @@
   }
   , "dependencies": {
       "mocha": "~> 1.2.2"
-    , "zombie": "~> 1.2.0"
+    , "zombie": "~> 1.1.0"
   }
   , "devDependencies": {
       "expect.js": "*"
