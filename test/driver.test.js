@@ -38,5 +38,13 @@ describe('Driver', function() {
       });
       driver.run(__dirname+'/fixture/success.html');
     });
+
+    it('should emit "error" when test not run', function(done) {
+      driver.on('error', function(error) {
+        expect(error.name).to.eql('TestNotRun');
+        done();
+      });
+      driver.run('not exist path');
+    });
   });
 });
