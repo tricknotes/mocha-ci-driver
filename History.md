@@ -1,3 +1,9 @@
+v0.2.0 - Jun 5th 2013
+=========================
+
+* Upgrade Zombie to 2.0.0
+* Emit error when test not run
+
 v0.1.2 - June 29th 2012
 =========================
 
