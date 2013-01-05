@@ -11,15 +11,18 @@ describe('Driver', function() {
 
   describe('#run()', function() {
     it('should emit "error" with failure test', function(done) {
-      driver.on('error', function(error) {
+      driver.on('error', function(error, result) {
         expect(error.name).to.eql('TestFailure');
+        expect(result.failures).to.eql(1);
         done();
       });
       driver.run(__dirname+'/fixture/failure.html');
     });
 
     it('should emit "success" with success test', function(done) {
-      driver.on('success', function() {
+      driver.on('success', function(result) {
+        expect(result.total).to.eql(1);
+        expect(result.failures).to.eql(0);
         done();
       });
       driver.run(__dirname+'/fixture/success.html');
@@ -27,7 +30,8 @@ describe('Driver', function() {
 
     it('should support running multiple tests', function(done) {
       driver.on('success', function() {
-        driver.on('error', function() {
+        driver.on('error', function(error) {
+          expect(error.name).to.eql('TestFailure');
           done();
         });
         driver.run(__dirname+'/fixture/failure.html');
