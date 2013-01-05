@@ -1,7 +1,7 @@
-var Driver = require('../').Driver
+var Driver = require('../').Driver;
 
 describe('Driver', function() {
-  var driver
+  var driver;
 
   beforeEach(function() {
     driver = new Driver();
@@ -10,7 +10,7 @@ describe('Driver', function() {
   describe('#run()', function() {
     it('should emit "error" with failure test', function(done) {
       driver.on('error', function() {
-        done()
+        done();
       });
       driver.run(__dirname+'/fixture/failure.html');
     });
