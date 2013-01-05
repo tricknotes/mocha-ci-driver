@@ -1,4 +1,6 @@
-var Driver = require('../').Driver;
+var Driver = require('../').Driver
+  , expect = require('expect.js')
+  ;
 
 describe('Driver', function() {
   var driver;
@@ -9,7 +11,8 @@ describe('Driver', function() {
 
   describe('#run()', function() {
     it('should emit "error" with failure test', function(done) {
-      driver.on('error', function() {
+      driver.on('error', function(error) {
+        expect(error.name).to.eql('TestFailure');
         done();
       });
       driver.run(__dirname+'/fixture/failure.html');
