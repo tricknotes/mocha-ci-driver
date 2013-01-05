@@ -1,5 +1,4 @@
 var Driver = require('../').Driver
-  , expect = require('expect.js')
 
 describe('Driver', function() {
   var driver
