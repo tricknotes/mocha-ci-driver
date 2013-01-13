@@ -13,7 +13,7 @@
       "node": ">=0.6.0 <0.9.0"
   }
   , "scripts": {
-      "test": "./node_modules/.bin/mocha --colors --reporter spec test/*.test.*"
+      "test": "mocha --colors --reporter spec test/*.test.*"
   }
   , "dependencies": {
       "mocha": ">=1.2.2"
